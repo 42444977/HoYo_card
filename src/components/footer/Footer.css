@@ -1,0 +1,27 @@
+.footer {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-disclaimer {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.35);
+    margin: 0 0 6px;
+}
+
+.footer-note {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.25);
+    margin: 0 0 4px;
+}
+
+.footer-source {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.2);
+    margin: 0;
+}

@@ -1,0 +1,22 @@
+.distribution-chart {
+    margin-top: 0.5rem;
+}
+
+.chart-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 1rem;
+}
+
+.chart-container {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 14px;
+    padding: 1rem 0.5rem 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .chart-container {
+        padding: 0.5rem 0;
+    }
+}

@@ -1,0 +1,165 @@
+/* ===== 應用佈局 ===== */
+.app {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.5s;
+}
+
+.theme-genshin.app {
+    background: linear-gradient(170deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+}
+
+.theme-starrail.app {
+    background: linear-gradient(170deg, #0d0d1a 0%, #1a0d2e 40%, #2d1b69 100%);
+}
+
+.theme-zzz.app {
+    background: linear-gradient(170deg, #111113 0%, #1a1a1e 40%, #2a1a1e 100%);
+}
+
+/* 背景裝飾 */
+.bg-gradient {
+    position: fixed;
+    top: -50%;
+    right: -20%;
+    width: 60%;
+    height: 80%;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+    animation: bgFloat 8s ease-in-out infinite alternate;
+}
+
+.bg-particles {
+    position: fixed;
+    bottom: -30%;
+    left: -10%;
+    width: 40%;
+    height: 60%;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--gold-glow) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+    animation: bgFloat 10s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes bgFloat {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(30px, -20px) scale(1.05);
+    }
+}
+
+/* 容器 */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* 標題 */
+.app-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.app-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #fff 30%, var(--gold-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.3;
+}
+
+.title-icon {
+    display: inline-block;
+    animation: titleSpin 3s ease-in-out infinite;
+}
+
+@keyframes titleSpin {
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+}
+
+.app-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+/* 遊戲橫幅圖片 */
+.game-banner {
+    margin-bottom: 2rem;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.banner-image:hover {
+    transform: scale(1.02);
+}
+
+/* 主要內容區 */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ===== 響應式佈局 ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .app-title {
+        font-size: 1.75rem;
+    }
+
+    .app-subtitle {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem 0.75rem;
+    }
+
+    .app-title {
+        font-size: 1.5rem;
+    }
+
+    .game-banner {
+        max-height: 280px;
+    }
+}
