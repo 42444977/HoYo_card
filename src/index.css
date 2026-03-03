@@ -56,3 +56,12 @@ body {
     --bg-primary: #111113;
     --bg-secondary: #1a1a1e;
 }
+
+/* 鳴潮主題 */
+.theme-wuwa {
+    --accent-color: #00E5CC;
+    --accent-dark: #00B8A3;
+    --accent-glow: rgba(0, 229, 204, 0.25);
+    --bg-primary: #0a1a18;
+    --bg-secondary: #0d2420;
+}

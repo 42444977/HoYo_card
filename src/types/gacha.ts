@@ -4,7 +4,7 @@
  */
 
 /** 支援的遊戲列舉 */
-export type GameType = 'genshin' | 'starRail' | 'zzz';
+export type GameType = 'genshin' | 'starRail' | 'zzz' | 'wuwa';
 
 /** 單一卡池的配置參數 */
 export interface BannerConfig {

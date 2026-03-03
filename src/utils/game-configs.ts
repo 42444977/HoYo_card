@@ -91,15 +91,47 @@ const ZZZ_CONFIG: GameConfig = {
     themeClass: 'theme-zzz',
 };
 
+const WUWA_CONFIG: GameConfig = {
+    id: 'wuwa',
+    name: '鳴潮',
+    characterBanner: {
+        baseFiveStarRate: 0.008,
+        softPityStart: 64,
+        hardPity: 80,
+        // NOTE: 社群統計推算，軟保底每抽遞增約 6%
+        softPityIncrement: 0.06,
+        // NOTE: 鳴潮角色限定池為 50/50 機制，歪 1 次後大保底
+        upRateOnFiveStar: 0.5,
+        lossesToGuarantee: 1,
+    },
+    weaponBanner: {
+        baseFiveStarRate: 0.008,
+        softPityStart: 64,
+        hardPity: 80,
+        softPityIncrement: 0.06,
+        // NOTE: 鳴潮武器池無 50/50，80 抽內直接保底 UP 武器
+        upRateOnFiveStar: 1.0,
+        lossesToGuarantee: 0,
+    },
+    characterTerm: '諧振',
+    weaponTerm: '武器',
+    currencyName: '星聲',
+    pullItemName: '星靈',
+    currencyPerPull: 160,
+    bannerImage: './images/ww.png',
+    themeClass: 'theme-wuwa',
+};
+
 /** 所有遊戲配置對照表 */
 export const GAME_CONFIGS: Record<GameType, GameConfig> = {
     genshin: GENSHIN_CONFIG,
     starRail: STAR_RAIL_CONFIG,
     zzz: ZZZ_CONFIG,
+    wuwa: WUWA_CONFIG,
 };
 
 /** 遊戲列表（用於渲染切換頁籤） */
-export const GAME_LIST: GameType[] = ['genshin', 'starRail', 'zzz'];
+export const GAME_LIST: GameType[] = ['genshin', 'starRail', 'zzz', 'wuwa'];
 
 /** 快捷預設目標 */
 export const QUICK_PRESETS = [

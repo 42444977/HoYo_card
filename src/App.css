@@ -18,6 +18,10 @@
     background: linear-gradient(170deg, #111113 0%, #1a1a1e 40%, #2a1a1e 100%);
 }
 
+.theme-wuwa.app {
+    background: linear-gradient(170deg, #0a1a18 0%, #0d2420 40%, #0f3a30 100%);
+}
+
 /* 背景裝飾 */
 .bg-gradient {
     position: fixed;

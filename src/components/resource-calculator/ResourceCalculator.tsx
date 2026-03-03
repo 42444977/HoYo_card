@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import { GameConfig, GachaTarget, CurrentProgress } from '../../types/gacha';
 import { calculateProbability } from '../../utils/gacha-engine';
+import { formatProbability } from '../../utils/format';
 import './ResourceCalculator.css';
 
 interface ResourceCalculatorProps {
@@ -191,7 +192,7 @@ function ResourceCalculator({ gameConfig, target }: ResourceCalculatorProps) {
             {probability !== null && (
                 <div className="probability-result">
                     <div className="prob-value" style={{ color: getProbabilityColor(probability) }}>
-                        {(probability * 100).toFixed(1)}%
+                        {formatProbability(probability)}
                     </div>
                     <div className="prob-desc">
                         使用 {calculatedPulls.toLocaleString()} 抽達成目標的概率
